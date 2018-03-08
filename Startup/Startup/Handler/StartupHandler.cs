@@ -163,6 +163,7 @@ namespace Startup.Handler
             {
                 Process proc = new Process();
                 proc.StartInfo.FileName = element.File.FullName;
+                //proc.IsRunning();
                 proc.Start();
 
                 WaitForIdle(proc);

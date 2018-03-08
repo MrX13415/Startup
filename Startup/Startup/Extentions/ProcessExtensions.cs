@@ -22,5 +22,12 @@ namespace Startup.Extensions
 
             return children;
         }
+
+        public static bool IsRunning(this Process process)
+        {
+            var dd = process.MainModule.FileName;
+            return Process.GetProcessesByName(process.ProcessName)
+                .FirstOrDefault(p => p.MainModule.FileName.StartsWith("")) != default(Process);
+        }
     }
 }

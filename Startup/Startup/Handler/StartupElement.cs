@@ -37,7 +37,7 @@ namespace Startup.Handler
 
         public StartupElement(string fileStr)
         {
-            this.Delay = 5;
+            this.Delay = Properties.Settings.Default.ServiceTimeout;
             this.File = new FileInfo(fileStr);
             this.Status = StartupStatus.Queue;
 

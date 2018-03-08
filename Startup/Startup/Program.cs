@@ -25,7 +25,7 @@ namespace Startup
         {
             Console.WriteLine("Startup v2.0 beta (c) 2018 icelane.net");
             Console.WriteLine();
-            Console.WriteLine(" [{0}]", "ICELANE - Server 2.0");
+            Console.WriteLine(" [{0}]", Properties.Settings.Default.ServerName);
         }
 
         static void WriteDate()
@@ -139,7 +139,7 @@ namespace Startup
                 handler.ReportError += ReportError;
                 handler.WriteElement += WriteElement;
 
-                handler.Initialize(new DirectoryInfo(@"S:\Startup\Config"));
+                handler.Initialize(new DirectoryInfo(Properties.Settings.Default.ConfigDirectory));
 
                 WriteStartHeader(handler);
                 handler.Run();
@@ -156,8 +156,12 @@ namespace Startup
 
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine("Press any Key to exit...");
-            Console.ReadKey();
+            Console.WriteLine("Press END to exit...");
+
+            while (Console.ReadKey().Key == ConsoleKey.End)
+            {
+                Thread.Sleep(250);
+            }
         }
     }
 }
