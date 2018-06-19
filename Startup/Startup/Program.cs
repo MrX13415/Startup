@@ -158,7 +158,7 @@ namespace Startup
             Console.WriteLine();
             Console.WriteLine("Press END to exit...");
 
-            while (Console.ReadKey().Key == ConsoleKey.End)
+            while (Console.ReadKey().Key != ConsoleKey.End)
             {
                 Thread.Sleep(250);
             }
