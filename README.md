@@ -3,7 +3,7 @@
 # Startup
 
 
-Startup is a small utility, to automate the start of none service processes on Windows Server.
+Startup is a small utility, to automate the start of non-service processes on Windows Server.
 It provides a little bit more control over the `Startup` folder of one user account.
 
 
