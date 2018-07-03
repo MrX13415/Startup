@@ -23,10 +23,12 @@ Make sure, you are at least on **Version 1607** of Windows.
 
 1. Place the `_Bin` folder anywhere on your hard drive.
 
-2. Move the `Config` folder to the desired location. 
+2. Move the `Config` folder to a desired location. 
 
 3. Create a link to the `_Bin/startup.exe` in the `startup`
    folder of the appropriate user account.
+   (To go to the `startup` folder of the current user,
+   type `shell:startup` in the address bar and hit **Enter**.)
  
 4. Open and edit the `_Bin/Startup.exe.config` file to match your needs.
    Make sure the path to your `Config` folder is set correctly.
@@ -36,7 +38,7 @@ Make sure, you are at least on **Version 1607** of Windows.
    Download: [Autologon - Windows Sysinternals](https://docs.microsoft.com/en-us/sysinternals/downloads/autologon)
  
    1. Download and open the tool **Autologon**
-   2. Enter the name of the desired user account
+   2. Enter the name and password of the desired user account
    3. Click on **Enable**
 
    To disable auto login, run the tool again and Click on **Disable**.
